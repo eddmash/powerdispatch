@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1772682979"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1772682979" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Signal.html">Signal</a></li>
+                                                    <li class="class"><a href="../classes/SignalException.html">SignalException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>Signal</h1>
+                    <p><em>An event(signal) system for CI.</em></p>
+                    <p>The term event and signal are used to mean the same thing in this class.</p>
+<p>This class listens for signals that occur within an application and
+notifies some other part of the system that a the signal has occurred.</p>
+<h4>Example</h4>
+<p>This maybe useful e.g. if you want to send email each time a new user is registered.</p>
+<h4><strong>Loading The Library</strong></h4>
+<p>To start using the signal dispatcher, load it like any other CODIGNTER library, preferably using autoload</p>
+<pre><code>$autoload['libraries'] = array(
+         'powerdispatch/signal',<------------------------------------ the dispatcher
+         'powerorm/orm',
+         'powerauth/auth'
+);</code></pre>
+<h4><strong>The Sender</strong></h4>
+<p>For this to happen the user registration mechanism has to issue some signals to notify
+other parts of the system/application it has registered a user,</p>
+<p>So in this case the user registration mechanism is called the <strong>sender</strong>. i.e it sends signals</p>
+<p>To send a signal you use the <a href="/classes/Signal.html#method_dispatch">\Signal::dispatch()</a> method of the Signal class as shown in the example below</p>
+<pre><code>class User_model extends Base_model{
+             ... // other methods
+
+     public function save($args){
+             ... // saving logic
+
+         $saved_user = ...
+
+         // notify everyone that is listening that a user has been registered
+         $this->signal->dispatch('powerorm.model.post_save', get_class($this), $saved_user);
+     }
+
+}
+
+class User_controller extends CI_Controller{
+         ... // logic to save user
+         $this->user_model->save($args);
+
+}</code></pre>
+<h4><strong>Signal</strong></h4>
+<p>A signal just a PHP string,
+When coming up with a signal name try to make them a unique as possible to avoid collisions with other
+parts of the application dispatching a signal having the same string for a signal.</p>
+<p>e,g the one i have used 'powerorm.model.post_save' in the example. in which my models leave in a
+package called <code>powerorm</code></p>
+<h4><strong>The Receiver</strong></h4>
+<p>Once the user registration mechanism has issued a notification that it has registered a user, The 'Signal' class,
+will notify all other parts of the application/system of this notification.</p>
+<p>For any part of the system/application to be notified of this signals,
+it has to register with the <code>Signal</code> class.</p>
+<p>Once registered it becomes a <strong>receiver</strong> i.e. it receives signals.</p>
+<p>A receiver can be any PHP function or method that is it returns true when tested by is_callable()
+and callable via call_user_func()</p>
+<h4><strong>Registering Receivers</strong></h4>
+<p>To register recievers, create a file <code>config/signals.php</code> add create and array of receivers.</p>
+<p>Just like you would CI HOOKS</p>
+<p><strong>Take Note of </strong> <pre><code>$receivers['model.post_save'][] = ... </code></pre></p>
+<p>This allows for multiple receivers to listen for the same signal.
+The order you define your array will be the execution order.</p>
+<p>Continuing with our example the first two receivers will be notified when the registration mechanism registers a user.
+Which will the perform some actions</p>
+<pre><code>// class method
+
+$receivers['powerorm.model.post_save'][] = array(
+     'class'    => 'Authauth', // the class to be invoked, leave blank if you just using a function
+     'function' => 'auth_check', // function / method to be called
+     'filename' => 'Authauth.php', // the file name containing the function or class with the method to be called
+     'filepath' => 'libraries' // the directory where the file is located relative to the application directory.
+);
+
+// function
+
+$receivers['powerorm.model.post_save'][] = array(
+     'class'    => '',
+     'function' => 'email',
+     'filename' => 'sender.php',
+     'filepath' => 'libraries'
+     'sender' => 'user_model' // in this case we only want to listen for when user_model issues a `model.post_save` signal
+);
+
+// closure function
+
+$receivers['powerorm.model.pre_save'][] =function($sender, $params){
+
+};
+
+// closure function
+// not here that only one  receiver is listening for this signal
+$receivers['powerauth.auth.login_success'] =function($sender, $params){
+
+};</code></pre>
+<h4> How it works </h4>
+<p>When a sender issues a signal, all the registered receivers are notified, the receivers the performs some action</p>
+<h4> Important Things To Note </h4>
+<ul>
+<li>
+<p>Does not replace the CI Hooks but Works parallel to Hooks.</p>
+</li>
+<li>Load it early enough to be able to catch all signals.
+I recommend use ci autoload and make the first in the libraries array.</li>
+</ul>
+<pre><code>$autoload['libraries'] = array(
+     'powerdispatch/signal',
+     'session',
+     'powerorm/orm',
+     'powerauth/auth'
+);</code></pre>
+<h4>Similarity from CI HOOKS</h4>
+<ul>
+<li>Receivers are registered in a config file called <code>config/signals.php</code></li>
+<li>Registering a receiver requires same amount paramaters as hooks</li>
+</ul>
+<h4>Difference from CI HOOKS</h4>
+<ul>
+<li>
+<p>A receiver can register to listen for specific senders only. see receiver example above</p>
+</li>
+<li>The receiver method get two mandatory arguments
+<ul>
+<li>sender -- this is the object that sent the signal</li>
+<li>params -- This are extra arguments sent to the receiver by the sendender,
+while most sender will not send extra arguments the receiver is expected accept this argument
+this because the sender might start sending arguments in future</li>
+</ul></li>
+</ul>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Signal.html#method_dispatch" class="">dispatch()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Signal.html"><div class="path-wrapper">Signal.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">POWERCI</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Signal</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Eddilbert Macharia (<a href="http://eddmash.com">http://eddmash.com</a>) <a href="mailto:edd.cowan@gmail.com">edd.cowan@gmail.com</a></p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_dispatch" name="method_dispatch" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">dispatch()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">dispatch(string  <span class="argument">$signal</span>, mixed  <span class="argument">$sender</span>, mixed  <span class="argument">$params = NULL</span>) : boolean</pre>
+                <p><em>Sends signal from sender to all register receivers.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$signal </td>
+                                <td><p>the signal to dispatch e.g post_save.
+make you signals as unique as possible to avoid collusions with other peoples collisions</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$sender </td>
+                                <td><p>the object sendign this signal can be an object or a name</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$params </td>
+                                <td><p>extra params to pass to receiver</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\SignalException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Signal.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Signal.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 1st, 2016 at 00:04.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
