@@ -2,7 +2,7 @@
   "name": "eddmash/powerdispatch",
   "type": "CodeIgniter-library",
   "keywords": ["codeigniter", "signal", "event"],
-  "description": "A very simple but effective codeignter orm",
+  "description": "A Simple to use codeigniter authentication system",
   "homepage": "https://github.com/eddmash/powerdispatch",
   "license": "MIT",
   "authors": [
