@@ -9,6 +9,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 require_once('SignalException.php');
+require_once('signal_tools.php');
 
 
 /**
